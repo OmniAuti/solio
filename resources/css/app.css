@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme { 
+    --text-hero: clamp(10rem, 20vw, 20rem);
+    --text-heading: clamp(2.4rem, 3vw, 3.6rem);
+    --text-base: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+:root {
+    --header-height: 80px;
+    --background-paper: #f4f0e8;
+    /* --background-paper: ÷#F2F3EA; */
+    /* --black: #1a1c1a; */
+    --black: #1E2022;
+}
+
+* {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html {
+    width: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: var(--background-paper);
+    color: var(--black);
+}
+
+#btn--light_dark_mode {
+    background-color: red;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+main {
+    padding: 4rem;
+}
+
+.news-cycle-regular {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black);
+}
+
+.news-cycle-bold {
+  font-family: "News Cycle", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--black);
+}
+
+.hero--default {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1260px;
+    height: calc(100vh - var(--header-height));
+    max-height: 1260px;
+    padding: 4rem;
+}
+
+.section--default {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1260px;
+    height: calc(100vh - var(--header-height));
+    min-height: 720px;
+}
+
+.padding--header {
+    padding: 2rem;
+}
+
+.padding--default {
+    padding: 4rem 2rem;
+}
+
+@media only screen and (min-width: 640px) {
+    .padding--header {
+        padding: 2rem 4rem;
+    }
+
+    .padding--default {
+        padding: 4rem;
+    }
+}
