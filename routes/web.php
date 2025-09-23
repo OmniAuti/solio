@@ -10,6 +10,6 @@ Route::get('/', function () {
 // CREATE USER
 Route::get('/create-account', [RegisterUserController::class, 'view']);
 Route::post('/create-account', [RegisterUserController::class, 'store']);
-// LOGIn
+// LOGIN
 Route::get('/login', [SessionController::class, 'view']);
 Route::post('/login', [SessionController::class, 'store']);

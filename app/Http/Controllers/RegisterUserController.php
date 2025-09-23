@@ -17,10 +17,13 @@ class RegisterUserController extends Controller
 
     public function store() {
         $validatedAttributes = request()->validate([
-            'name' => ['required'],
             'email' => ['required'],
-            'stagename' => ['required'],
+            'first_name' => ['required'],
+            'last_name' => ['required'],
+            'stage_name' => ['required'],
             'password' => ['required'],
+            'birthday' => ['required'],
+            'terms_of_use' => ['required']
         ]);
     }
 }
