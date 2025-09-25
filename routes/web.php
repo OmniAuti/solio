@@ -13,3 +13,7 @@ Route::post('/create-account', [RegisterUserController::class, 'store']);
 // LOGIN
 Route::get('/login', [SessionController::class, 'view']);
 Route::post('/login', [SessionController::class, 'store']);
+// DASHBOARD
+Route::get('/dashboard', function() {
+    return view('pages/dashboard');
+});

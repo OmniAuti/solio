@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('stage_name')->unique();;
             $table->string('password');
-            $table->string('birthday');
+            $table->date('birthday');
             $table->boolean('terms_of_use');
             $table->rememberToken();
             $table->timestamps();
