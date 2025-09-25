@@ -5,9 +5,9 @@
             <form method="POST" action="/login" class="text-base">
                 @csrf
                 <div class="mb-4">
-                    <label for="username"></label>
-                    <input autocomplete="username" id="username" placeholder="Email or Username" type="text" name="username">
-                    @error('username')
+                    <label for="email"></label>
+                    <input value="{{old('email')}}" autocomplete="email" id="email" placeholder="Email or email" type="text" name="email">
+                    @error('email')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
                 </div>

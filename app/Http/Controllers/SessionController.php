@@ -14,14 +14,26 @@ class SessionController extends Controller
 
     public function store() {
         $validated_attributes = request()->validate([
-            'username' => ['required'],
+            'email' => ['required'],
             'password' => ['required']
         ]);
-        die($validated_attributes);
 
+        // NEED TO HAVE ONE WHERE IT CHECKS IF USERNAME OR EM AIL ENTERED
+        $validLogin = Auth::attempt($validated_attributes);
+        
+        if (!$validLogin) {
+            throw ValidationException::withMessages([
+                'email' => 'Sorry, these login credentials do not match what we have in our system',
+            ]);
+        }
+
+        request()->session()->regenerate();
+
+        return redirect('/dashboard');
     }
 
     public function destroy() {
-
+        Auth::logout();
+        return redirect('/login');
     }
 }

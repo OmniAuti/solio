@@ -7,7 +7,12 @@
     <nav>
         <ul class="text-base flex items-center justify-around w-100">
             <li><a href="/stages">Stages</a></li>
-            <li><a href="/login">Login</a></li>
+            @auth
+                <li><a href="/logout">Logout</a></li>
+            @endauth
+            @guest
+                <li><a href="/login">Login</a></li>
+            @endguest
         </ul>
     </nav>
 </header>
