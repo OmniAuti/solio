@@ -7,28 +7,28 @@
                 @csrf
                 <div class="mb-4 border">
                     <label for="signup-email">Email</label>
-                    <input autocomplete="off" id="signup-email" placeholder="Email" type="email" name="email">
+                    <input value="{{old('email')}}" autocomplete="off" id="signup-email" placeholder="Email" type="email" name="email">
                     @error('email')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-4 border">
                     <label for="signup-first_name">First Name</label>
-                    <input autocomplete="off" id="signup-first_name" placeholder="Name" type="text" name="first_name">
+                    <input value="{{old('first_name')}}" autocomplete="off" id="signup-first_name" placeholder="Name" type="text" name="first_name">
                     @error('first_name')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-4 border">
                     <label for="signup-last_name">Last Name</label>
-                    <input autocomplete="off" id="signup-last_name" placeholder="Name" type="text" name="last_name">
+                    <input value="{{old('last_name')}}" autocomplete="off" id="signup-last_name" placeholder="Name" type="text" name="last_name">
                     @error('last_name')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-4 border">
                     <label for="signup-stagename">Stage Name (Username)</label>
-                    <input autocomplete="off" id="signup-stagename" placeholder="Stage Name" type="text" name="stage_name">
+                    <input value="{{old('stage_name')}}" autocomplete="off" id="signup-stagename" placeholder="Stage Name" type="text" name="stage_name">
                     @error('stagename')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
@@ -50,7 +50,7 @@
                 <div class="mb-4 border">
                     <label for="signup-birthday">Birthday</label>
                     <span class="block opacity-75">This will be private and not publicly shown.</span>
-                    <input class="cursor-pointer" autocomplete="off" id="signup-birthday" placeholder="******" type="date" name="birthday">
+                    <input value="{{old('birthday')}}" class="cursor-pointer" autocomplete="off" id="signup-birthday" placeholder="******" type="date" name="birthday">
                     @error('birthday')
                         <p class="text-red-500">{{$message}}</p>
                     @enderror
